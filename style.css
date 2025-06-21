@@ -1,0 +1,189 @@
+/* Basic Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.container {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* SCREENS */
+
+.screen {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.screen.active {
+    display: block;
+}
+
+/* START SCREEN */
+
+#start-screen h1 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#start-screen p {
+  color: rgb(16, 15, 15);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.quiz-header{
+    margin-bottom: 2rem;
+}
+
+#question-text {
+color: rgb(6, 6, 6);
+font-size: 1.5rem;
+margin-bottom: 1rem;
+line-height: 1.4rem;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.answer-btn {
+    background-color: rgb(238, 236, 236);
+    color: rgb(9, 9, 9);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.answer-btn:hover {
+    background-color: rgb(250, 211, 211);
+    border-color: black;
+}
+
+.answer-btn.correct {
+    background-color: beige;
+    border-color: #111010;
+    color: green;
+}
+
+.answer-btn.incorrect {
+    background-color: beige;
+    border-color: #bf3636;
+    color: rgb(126, 18, 18);
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #f8f0e5;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #bf3636;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* RESULT SCREEN */
+
+#result-screen h1 {
+    color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.result-info {
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.result-info p {
+    font-size: 1.2rem;
+    color: rgb(228, 220, 220);
+    margin-bottom: 1rem;
+}
+
+#result-message {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #252222;
+    
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 500px) {
+  /* when we hit 500px and below, implement the styles below */
+
+  .screen {
+    padding: 1rem;
+  }
+
+  #start-screen h1 {
+    font-size: 2rem;
+  }
+
+  #question-text {
+    font-size: 1.3rem;
+  }
+
+  .answer-btn {
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
